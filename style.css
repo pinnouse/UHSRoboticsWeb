@@ -1,7 +1,121 @@
 body {
+  position: relative;
   margin: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #000000;
+  background: #2e2e2e;
   color: #ffffff;
+}
+
+div.view-container {
+  position: relative;
+}
+
+div.view-container div.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+
+div.view-container div.page > div.tooltip {
+  text-align: right;
+  position: absolute;
+  bottom: 12vh;
+  left: 26vh;
+  height: 18px;
+  width: 0px;
+  padding: 8px 0;
+  border-bottom: 3px solid #ffffff;
+  transition: 130ms linear;
+}
+
+div.view-container div.page:hover > div.tooltip {
+  width: 96px;
+  padding: 8px 12px;
+  transition-delay: 100ms;
+}
+
+div.view-container div.page > div.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 12vh;
+  left: -26vh;
+  height: 3px;
+  width: 27.45vh;
+  background: #ffffff;
+  transform: rotate(-45deg) translate(10px, 26px) scaleX(0);
+  transition: 100ms linear;
+  transition-delay: 130ms;
+}
+
+div.view-container div.page:hover > div.tooltip::before {
+  transform: rotate(-45deg) translate(10px, 26px) scaleX(1);
+  transition: 100ms linear;
+  transition-delay: 0;
+}
+
+div.view-container div.page > div.tooltip::after {
+  content: attr(data-page);
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  transition: 120ms linear;
+}
+
+div.view-container div.page:hover > div.tooltip::after {
+  opacity: 1;
+  transition-delay: 230ms;
+}
+
+div.view-container div.page > div.planet {
+  position: absolute;
+  height: 24vh;
+  width: 24vh;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f07400;
+  transition: 90ms cubic-bezier(0.575, 0.565, 0.865, 1);
+}
+
+div.view-container div.page:hover > div.planet {
+  transform: scale(1.1);
+}
+
+div.planet > span.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #2e2e2e;
+  opacity: 0.1;
+  transform: rotate(30deg) translate(50%, 0);
+}
+
+div.view-container div.page.about {
+  top: 24vh;
+  left: 24vw;
+}
+
+div.view-container div.page.team {
+  top: 32vh;
+  left: 50vw;
+}
+
+div.view-container div.page.team > div.planet {
+  height: 26vh;
+  width: 26vh;
+}
+
+.mobile-view-container {
+  display: none;
+}
+
+@media only screen and (max-width: 786px) {
+  .view-container {
+    display: none;
+  }
+  .mobile-view-container {
+    display: initial;
+  }
 }
