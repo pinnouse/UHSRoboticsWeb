@@ -1,16 +1,54 @@
 body {
   position: relative;
   margin: 0;
+  height: 100vh;
+  width: 100vw;
   overflow-x: hidden;
-  background: #2e2e2e;
+  font-family: 'PT Sans', sans-serif;
+  background: #232224;
   color: #ffffff;
 }
 
 div.view-container {
   position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+div.view-container header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 32px;
+}
+
+div.view-container header h1 {
+  font-size: 32pt;
+}
+
+div.view-container footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+div.view-container footer span {
+  font-size: 10pt;
+}
+
+div.view-container img.star {
+  z-index: 0;
+  position: absolute;
+  width: 9px;
+  height: 9px;
 }
 
 div.view-container div.page {
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,71 +56,88 @@ div.view-container div.page {
   position: relative;
 }
 
+div.view-container div.page:hover:not(.selected) {
+  cursor: pointer;
+}
+
 div.view-container div.page > div.tooltip {
-  text-align: right;
   position: absolute;
-  bottom: 12vh;
-  left: 26vh;
-  height: 18px;
-  width: 0px;
-  padding: 8px 0;
-  border-bottom: 3px solid #ffffff;
+  top: calc(12vh + 16px);
+  left: -11vh;
+  height: 32px;
+  width: 22vh;
+  text-align: center;
+  opacity: 1;
   transition: 130ms linear;
 }
 
-div.view-container div.page:hover > div.tooltip {
-  width: 96px;
-  padding: 8px 12px;
-  transition-delay: 100ms;
+div.view-container div.page.selected > div.tooltip {
+  opacity: 0;
 }
 
 div.view-container div.page > div.tooltip::before {
+  display: block;
   content: "";
-  position: absolute;
-  top: 12vh;
-  left: -26vh;
-  height: 3px;
-  width: 27.45vh;
-  background: #ffffff;
-  transform: rotate(-45deg) translate(10px, 26px) scaleX(0);
-  transition: 100ms linear;
-  transition-delay: 130ms;
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 32px;
+  width: 22vh;
+  border-radius: 16px;
+  background: #4f4955;
+  transition: 130ms;
 }
 
 div.view-container div.page:hover > div.tooltip::before {
-  transform: rotate(-45deg) translate(10px, 26px) scaleX(1);
-  transition: 100ms linear;
-  transition-delay: 0;
+  background: #ffffff;
 }
 
 div.view-container div.page > div.tooltip::after {
   content: attr(data-page);
-  z-index: 1;
   position: relative;
-  opacity: 0;
-  transition: 120ms linear;
+  top: -26px;
+  color: #ffffff;
+  transition: 70ms;
 }
 
 div.view-container div.page:hover > div.tooltip::after {
-  opacity: 1;
-  transition-delay: 230ms;
+  color: #2e2e2e;
 }
 
 div.view-container div.page > div.planet {
   position: absolute;
+  top: -12vh;
+  left: -12vh;
   height: 24vh;
   width: 24vh;
   border-radius: 50%;
   overflow: hidden;
   background: #f07400;
-  transition: 90ms cubic-bezier(0.575, 0.565, 0.865, 1);
+  opacity: 1;
+  transition: 90ms transform cubic-bezier(0.575, 0.565, 0.865, 1), 240ms opacity;
+}
+
+div.view-container div.page > div.planet::after {
+  content: "";
+  display: block;
+  height: 24vh;
+  width: 144vh;
+  opacity: 0.23;
+  background: url(Clouds.svg) repeat-x;
+  animation: menu-slide 6.36s linear infinite;
 }
 
 div.view-container div.page:hover > div.planet {
-  transform: scale(1.1);
+  transform: scale(1.06);
+}
+
+div.view-container div.page.selected > div.planet {
+  opacity: 0;
 }
 
 div.planet > span.cover {
+  z-index: 10;
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -90,26 +145,115 @@ div.planet > span.cover {
   width: 100%;
   background: #2e2e2e;
   opacity: 0.1;
-  transform: rotate(30deg) translate(50%, 0);
+  transform: translate(50%, 0);
 }
 
-div.view-container div.page.about {
-  top: 24vh;
-  left: 24vw;
+div.view-container div.page > div.container {
+  visibility: hidden;
+  z-index: 20;
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  text-align: center;
+  background: #613811;
+  transition: 760ms top cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-div.view-container div.page.team {
-  top: 32vh;
+div.view-container div.page.selected > div.container {
+  visibility: visible;
+  top: 0;
+}
+
+div.view-container div.page > div.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(Clouds.svg);
+  opacity: 0.145;
+}
+
+div.view-container div.page > div.container > div.inner-container {
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+span.close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  height: 64px;
+  width: 64px;
+  text-align: left;
+  border-radius: 8px;
+  background: rgba(24, 24, 24, 0.245);
+  cursor: pointer;
+}
+
+span.close::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  transform: rotate(-45deg) scaleX(0.5);
+  transition: 460ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+span.close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 4px;
+  transform: rotate(45deg) scaleX(0.5);
+  transition: 460ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+span.close:hover::before {
+  transform: rotate(-45deg) scaleX(1);
+}
+
+span.close:hover::after {
+  transform: rotate(45deg) scaleX(1);
+}
+
+div.view-container div.page.sponsors {
+  top: 50vh;
   left: 50vw;
-}
-
-div.view-container div.page.team > div.planet {
-  height: 26vh;
-  width: 26vh;
 }
 
 .mobile-view-container {
   display: none;
+}
+
+@keyframes menu-slide {
+  0% {
+    transform: translate(0, 0);
+  } 100% {
+    transform: translate(-48vh, 0);
+  }
+}
+
+@keyframes menu-outline-spin {
+  0% {
+    transform: rotate(0);
+  } 100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 786px) {

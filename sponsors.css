@@ -1,0 +1,76 @@
+div.sponsors div.inner-container {
+  display: relative;
+  overflow-x: hidden;
+  padding-top: 4vh;
+}
+
+div.sponsors div.inner-container > div {
+  position: relative;
+  width: 100vw;
+}
+
+div.sponsors div.inner-container > div > h1 {
+  font-weight: normal;
+}
+
+div.sponsors div.inner-container > div ul {
+  width: 40vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+div.sponsors div.inner-container > div li {
+  margin: 16px 0;
+}
+
+div.sponsors div.inner-container > div.gold > img {
+  display: inline-block;
+  position: relative;
+  width: 40%;
+}
+
+div.sponsors div.inner-container div.content * {
+  vertical-align: top;
+}
+
+div.sponsors div.gold > div.content {
+  vertical-align: top;
+  display: inline-block;
+  position: relative;
+  width: 35%;
+  padding: 5% 0 5% 5%;
+}
+
+
+div.sponsors div.gold > div.content > img {
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  padding: 2%;
+}
+
+div.sponsors div.supporter > img {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
+div.sponsors div.supporter > div.content {
+  z-index: 10;
+  margin-right: 45%;
+  vertical-align: bottom;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  width: 45%;
+  padding: 5%;
+}
+
+div.sponsors div.supporter > div.content > img {
+  display: inline-block;
+  position: relative;
+  width: 30%;
+  padding: 1%;
+}
