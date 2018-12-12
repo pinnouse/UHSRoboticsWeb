@@ -2,7 +2,7 @@
 
 $(function() {
   for (let i = 0; i < 150; i++) {
-    $('.view-container').append('<img src="Star.svg" class="star" style="left:'  + (Math.random() * 100) + 'vw;top: ' + (Math.random() * 100) + 'vh;">');
+    $('.view-container').append('<img src="assets/images/Star.svg" class="star" style="left:'  + (Math.random() * 100) + 'vw;top: ' + (Math.random() * 100) + 'vh;">');
   }
 
   $(".page").each(function(ind, target) {
