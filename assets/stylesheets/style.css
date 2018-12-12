@@ -123,7 +123,7 @@ div.view-container div.page > div.planet::after {
   height: 24vh;
   width: 144vh;
   opacity: 0.23;
-  background: url(Clouds.svg) repeat-x;
+  background: url(../images/Clouds.svg) repeat-x;
   animation: menu-slide 6.36s linear infinite;
 }
 
@@ -174,7 +174,7 @@ div.view-container div.page > div.container::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(Clouds.svg);
+  background: url(../images/Clouds.svg);
   opacity: 0.145;
 }
 
