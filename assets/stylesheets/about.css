@@ -41,11 +41,24 @@ body {
     font-weight: normal;
 }
 
-#title>img {
-    display: inline-block;
-    position: relative;
+#mainImage>img {
+    position:absolute;
+    left:-50%; right:-50%; top:0;
+    margin:auto;
+    height:auto; width:100%;
+}
+
+#mainImage{
+    /* display: inline-block;
+    position: relative; */
+    position:relative;    
+    border-radius:100%;
+    overflow:hidden;
     width: 100%;
+    height: 100%;
     margin: 1.5vh 1vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5%;
 }
 
 #title>* {
@@ -101,7 +114,7 @@ body {
     color: #ccc;
 }
 
-#contacts{
+#contacts {
     font-size: 1.5em;
 }
 
@@ -114,7 +127,7 @@ body {
     #mainTitle {
         grid-area: title;
     }
-    #title>img {
+    #mainImage {
         grid-area: image;
     }
     #labels {
@@ -123,7 +136,7 @@ body {
     #title>p {
         grid-area: description;
     }
-    #contacts{
+    #contacts {
         grid-area: contacts;
     }
 }
