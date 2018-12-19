@@ -1,0 +1,129 @@
+* {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'PT Sans', sans-serif;
+    background: #613811;
+    color: #ffffff;
+}
+
+#main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/Clouds.svg);
+    opacity: 0.145;
+}
+
+.section {
+    margin: 2em auto;
+    color: white;
+    text-align: center;
+    min-width: 50em;
+    max-width: 80%;
+}
+
+/* 
+#title {
+    margin: 0 auto;
+} */
+
+#title>h1 {
+    font-weight: normal;
+}
+
+#title>img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 1.5vh 1vw;
+}
+
+#title>* {
+    margin: 1.5vh 2vw;
+}
+
+.label>i {
+    color: white;
+    font-size: 150%;
+    vertical-align: middle;
+}
+
+.label {
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 300;
+    background: #22110b;
+    margin: 1.2em 0;
+    position: relative;
+    padding: .5em .75em;
+    box-shadow: 0 0 0.15em 0.15em rgba(0, 0, 0, .15);
+    transition: .3s ease-out;
+}
+
+.label>* {
+    margin-right: .25em;
+    vertical-align: middle;
+}
+
+.label:hover {
+    background: #6a4f4b;
+}
+
+.label:active {
+    background: #55403c;
+}
+
+.label::before {
+    color: #fff;
+    content: attr(alt);
+    font-size: .5em;
+    left: 0;
+    top: -1.75em;
+    position: absolute;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
+}
+
+.labelTitle {
+    color: #fff;
+}
+
+.labelContent {
+    color: #ccc;
+}
+
+#contacts{
+    font-size: 1.5em;
+}
+
+@supports(display:grid) {
+    #title {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: "title title" "image contacts" "image labels" "description description"
+    }
+    #mainTitle {
+        grid-area: title;
+    }
+    #title>img {
+        grid-area: image;
+    }
+    #labels {
+        grid-area: labels;
+    }
+    #title>p {
+        grid-area: description;
+    }
+    #contacts{
+        grid-area: contacts;
+    }
+}
