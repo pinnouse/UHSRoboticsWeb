@@ -255,12 +255,12 @@ div.view-container div.page.sponsors {
     transform: rotate(360deg);
   }
 }
-
-@media only screen and (max-width: 786px) {
+/* 
+@media only screen and (max-width: 50em) {
   .view-container {
     display: none;
   }
   .mobile-view-container {
     display: initial;
   }
-}
+} */
