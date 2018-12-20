@@ -32,37 +32,29 @@ body {
     max-width: 80%;
 }
 
-/* 
-#title {
-    margin: 0 auto;
-} */
 
-#title>h1 {
+.title {
     font-weight: normal;
 }
 
-#mainImage>img {
-    position:absolute;
-    left:-50%; right:-50%; top:0;
-    margin:auto;
-    height:auto; width:100%;
-}
-
-#mainImage{
-    /* display: inline-block;
-    position: relative; */
-    position:relative;    
-    border-radius:100%;
-    overflow:hidden;
-    width: 100%;
-    height: 100%;
-    margin: 1.5vh 1vw;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5%;
-}
-
-#title>* {
+#titleSection>* {
     margin: 1.5vh 2vw;
+}
+
+#mainImage {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5%;
+    width: 100%;
+    height: auto;
+    margin: 1em 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+    transition: .3s;
+}
+
+#mainImage:hover{
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.14), 0 9px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1%;
 }
 
 .label>i {
@@ -75,7 +67,7 @@ body {
     display: inline-block;
     vertical-align: bottom;
     font-weight: 300;
-    background: #22110b;
+    background: #1E1308;
     margin: 1.2em 0;
     position: relative;
     padding: .5em .75em;
@@ -89,7 +81,7 @@ body {
 }
 
 .label:hover {
-    background: #6a4f4b;
+    background: #916333;
 }
 
 .label:active {
@@ -119,12 +111,12 @@ body {
 }
 
 @supports(display:grid) {
-    #title {
+    #titleSection {
         display: grid;
         grid-template-columns: 60% 40%;
         grid-template-areas: "title title" "image contacts" "image labels" "description description"
     }
-    #mainTitle {
+    .title {
         grid-area: title;
     }
     #mainImage {
@@ -133,7 +125,7 @@ body {
     #labels {
         grid-area: labels;
     }
-    #title>p {
+    #titleSection>p {
         grid-area: description;
     }
     #contacts {
