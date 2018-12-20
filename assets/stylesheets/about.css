@@ -38,8 +38,8 @@ body {
     max-width: 80%;
 }
 
-#titleSection{
-    margin:0 auto;
+#titleSection {
+    margin: 0 auto;
 }
 
 #titleSection>* {
@@ -63,7 +63,7 @@ body {
 
 #mainImage:hover {
     box-shadow: 0 .6em 2em 0 rgba(0, 0, 0, 0.14), 0 .9em 4em 0 rgba(0, 0, 0, 0.1);
-    border-radius: 1%;
+    border-radius: .5%;
 }
 
 #labels {
@@ -144,5 +144,11 @@ body {
     }
     #contacts {
         grid-area: contacts;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    * {
+        display: none;
     }
 }
