@@ -255,7 +255,7 @@ div.view-container div.page.sponsors {
     transform: rotate(360deg);
   }
 }
-
+/* 
 @media only screen and (max-width: 50em) {
   .view-container {
     display: none;
@@ -263,4 +263,4 @@ div.view-container div.page.sponsors {
   .mobile-view-container {
     display: initial;
   }
-}
+} */
