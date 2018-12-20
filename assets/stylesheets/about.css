@@ -26,6 +26,7 @@ body {
     height: 100%;
     width: 100%;
     background: url(../images/Clouds.svg);
+    background-attachment: fixed;
     opacity: 0.145;
 }
 
@@ -35,6 +36,10 @@ body {
     text-align: center;
     min-width: 50em;
     max-width: 80%;
+}
+
+#titleSection{
+    margin:0 auto;
 }
 
 #titleSection>* {
