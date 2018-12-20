@@ -23,14 +23,48 @@ div.sponsors div.inner-container > div li {
   margin: 16px 0;
 }
 
-div.sponsors div.inner-container > div.gold > img {
+div.sponsors div.inner-container div.content * {
+  vertical-align: top;
+}
+
+div.sponsors div.diamond > img {
+  display: block;
+  width: 75vw;
+  margin: 0 auto;
+}
+
+div.sponsors div.diamond > div.content {
+  display: block;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+div.sponsors div.diamond > div.content > img {
+  width: 45%;
+  padding: 2%;
+}
+
+div.sponsors div.platinum > img {
+  display: block;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+div.sponsors div.platinum > div.content {
+  display: block;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+div.sponsors div.platinum > div.content > img {
+  width: 45%;
+  padding: 2%;
+}
+
+div.sponsors div.gold > img {
   display: inline-block;
   position: relative;
   width: 40%;
-}
-
-div.sponsors div.inner-container div.content * {
-  vertical-align: top;
 }
 
 div.sponsors div.gold > div.content {
