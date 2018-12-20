@@ -42,7 +42,7 @@ body {
 }
 
 #titleSection>* {
-    margin: 1.5vh 2vw;
+    margin: .5em 1.75em;
 }
 
 #contacts {
@@ -76,7 +76,7 @@ body {
 }
 
 .label {
-    width: auto;
+    white-space: nowrap;
     display: inline-block;
     vertical-align: bottom;
     font-weight: 300;
@@ -143,6 +143,9 @@ body {
 }
 
 @media only screen and (max-width: 50em) {
+    #titleSection>* {
+        margin: 1em .5em;
+    }
     .section {
         min-width: 100%;
         /* width: 100%; */
@@ -156,10 +159,19 @@ body {
         font-size: 2em;
     }
     #mainImage {
+        border-radius: 0%;
         width: 100%;
         height: auto;
         margin: 0;
         box-shadow: 0 .4em .8em 0 rgba(0, 0, 0, 0.3), 0 .7em 2em 0 rgba(0, 0, 0, 0.25);
         transition: .3s;
     }
+    #labels {
+        margin: 0 2em;
+    }
+    #contacts {
+        margin: 0;
+        margin-top: .6em;
+    }
+    
 }
