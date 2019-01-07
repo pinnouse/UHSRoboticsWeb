@@ -1,7 +1,11 @@
 div.sponsors div.inner-container {
-  display: relative;
+  position: relative;
   overflow-x: hidden;
   padding-top: 4vh;
+}
+
+div.sponsors div.inner-container > h1 {
+  font-size: 48pt;
 }
 
 div.sponsors div.inner-container > div {
@@ -9,12 +13,16 @@ div.sponsors div.inner-container > div {
   width: 100vw;
 }
 
-div.sponsors div.inner-container > div > h1 {
+div.sponsors div.inner-container > div > h2 {
+  color: #2f2f2f;
+  background: #fefefe;
+  padding: 32px 0;
   font-weight: normal;
 }
 
 div.sponsors div.inner-container > div ul {
-  width: 40vw;
+  background: #6b6b6b6e;
+  padding: 32px 30vw;
   margin: 0 auto;
   text-align: left;
 }
