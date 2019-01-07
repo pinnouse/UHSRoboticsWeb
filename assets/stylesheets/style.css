@@ -56,7 +56,7 @@ div.view-container div.page {
   position: relative;
 }
 
-div.view-container div.page:hover:not(.selected) {
+div.view-container div.page:hover:not(.hide) {
   cursor: pointer;
 }
 
@@ -71,7 +71,7 @@ div.view-container div.page > div.tooltip {
   transition: 130ms linear;
 }
 
-div.view-container div.page.selected > div.tooltip {
+div.view-container div.page.hide > div.tooltip {
   opacity: 0;
 }
 
@@ -131,7 +131,7 @@ div.view-container div.page:hover > div.planet {
   transform: scale(1.06);
 }
 
-div.view-container div.page.selected > div.planet {
+div.view-container div.page.hide > div.planet {
   opacity: 0;
 }
 
@@ -236,6 +236,17 @@ div.view-container div.page.sponsors {
   left: 50vw;
 }
 
+div.view-container div.page.about {
+  top: 50vh;
+  left: 70vw;
+  width: 13vh;
+  height: 13vh;
+}
+
+div.view-container div.page.about div.planet {
+  background: #3373ff;
+}
+
 .mobile-view-container {
   display: none;
 }
@@ -245,14 +256,6 @@ div.view-container div.page.sponsors {
     transform: translate(0, 0);
   } 100% {
     transform: translate(-48vh, 0);
-  }
-}
-
-@keyframes menu-outline-spin {
-  0% {
-    transform: rotate(0);
-  } 100% {
-    transform: rotate(360deg);
   }
 }
 /* 

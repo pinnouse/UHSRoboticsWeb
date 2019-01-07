@@ -11,6 +11,7 @@ $(function () {
     $target.click(function (ev) {
       if ($(ev.target).hasClass("close")) return;
       $target.addClass("selected");
+      $(".page").addClass("hide");
     });
     $target.find(".container").append('<span class="close"></span>');
   });
@@ -22,6 +23,7 @@ $(function () {
     }, 380, function () {
       $selected.removeClass("selected");
       $selected.find(".container").removeAttr("style");
+      $(".page").removeClass("hide");
     });
   });
 });
