@@ -4,7 +4,7 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   background: #232224;
   color: #ffffff;
 }
@@ -112,7 +112,6 @@ div.view-container div.page > div.planet {
   width: 24vh;
   border-radius: 50%;
   overflow: hidden;
-  background: #f07400;
   opacity: 1;
   transition: 90ms transform cubic-bezier(0.575, 0.565, 0.865, 1), 240ms opacity;
 }
@@ -158,7 +157,6 @@ div.view-container div.page > div.container {
   width: 100vw;
   overflow: hidden;
   text-align: center;
-  background: #613811;
   transition: 760ms top cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -181,8 +179,9 @@ div.view-container div.page > div.container::before {
 div.view-container div.page > div.container > div.inner-container {
   overflow-x: hidden;
   position: relative;
-  height: 100%;
+  height: 96vh;
   width: 100%;
+  padding-top: 4vh;
 }
 
 span.close {
@@ -231,22 +230,52 @@ span.close:hover::after {
   transform: rotate(45deg) scaleX(1);
 }
 
+div.view-container div.page.gallery {
+  top: 50vh;
+  left: 25vw;
+}
+
+div.view-container div.page.gallery div.planet {
+  top: -11vh;
+  left: -11vh;
+  height: 22vh;
+  width: 22vh;
+  background: #afa067;
+}
+
+div.view-container div.page.gallery > div.container {
+  background: #69613f;
+}
+
 div.view-container div.page.sponsors {
   top: 50vh;
   left: 50vw;
 }
 
+div.view-container div.page.sponsors div.planet {
+  background: #f07400;
+}
+
+div.view-container div.page.sponsors > div.container {
+  background: #613811;
+}
+
 div.view-container div.page.about {
   top: 50vh;
-  left: 70vw;
-  width: 13vh;
-  height: 13vh;
+  left: 75vw;
 }
 
 div.view-container div.page.about div.planet {
+  top: -11vh;
+  left: -11vh;
+  height: 22vh;
+  width: 22vh;
   background: #3373ff;
 }
 
+div.view-container div.page.about > div.container {
+  background: #224183;
+}
 .mobile-view-container {
   display: none;
 }

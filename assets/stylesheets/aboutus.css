@@ -1,0 +1,25 @@
+div.about .info-container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+div.about .info-container a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+div.about .info-container span {
+  font-size: 20px;
+  margin: 32px;
+  border-radius: 40px;
+  display: block;
+  text-align: left;
+  padding: 30px;
+  background: #2c3033;
+  background: rgba(44, 48, 51, 0.522);
+  transition: 340ms;
+}
+
+div.about .info-container span:hover {
+  background: rgba(44, 48, 51, 0.925);
+}

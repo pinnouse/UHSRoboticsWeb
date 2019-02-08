@@ -1,0 +1,14 @@
+div.gallery div.img-container {
+  margin: 0 auto;
+  width: 80vw;
+  padding: 8vh 0;
+}
+
+div.gallery div.img-container img {
+  image-orientation: from-image;
+  border-radius: 8px;
+  border: 6px solid #ffffff;
+  border: 6px solid rgba(255, 255, 255, 0.459);
+  height: 32vh;
+  margin: 16px;
+}

@@ -6,15 +6,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Local Styling -->
-  <link rel="stylesheet" href="assets/stylesheets/style.css" />
-  <link rel="stylesheet" href="assets/stylesheets/sponsors.css" />
-
   <!-- External Sources -->
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa|PT+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- Local Styling -->
+  <link rel="stylesheet" href="assets/stylesheets/style.css" />
+  <link rel="stylesheet" href="assets/stylesheets/sponsors.css" />
+  <link rel="stylesheet" href="assets/stylesheets/gallery.css" />
+  <link rel="stylesheet" href="assets/stylesheets/aboutus.css" />
+
   <script src="index.js"></script>
 </head>
 <body>
@@ -23,12 +26,22 @@
       <h1>UHS Robotics</h1>
     </header>
 
+    <div class="page gallery" data-page="gallery">
+      <div class="container">
+        <div class="inner-container">
+          <h1>Gallery</h1>
+          <p>Here are some photos of our team at work as well as past competitions.</p>
+          <div class="img-container"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="page sponsors" data-page="sponsors">
       <div class="container">
         <div class="inner-container">
           <h1>Sponsors</h1>
           <div class="diamond">
-            <h2>Diamond Supporter ($5000+)</h2>
+            <h2>Diamond ($5000+)</h2>
             <ul>
               <li>Team Poster</li>
               <li>Company Listed Here</li>
@@ -45,7 +58,7 @@
             </div>
           </div>
           <div class="platinum">
-            <h2>Platinum Supporter ($3000 &ndash; $4999)</h2>
+            <h2>Platinum ($3000 &ndash; $4999)</h2>
             <ul>
               <li>Team Poster</li>
               <li>Company Listed Here</li>
@@ -62,7 +75,7 @@
             </div>
           </div>
           <div class="gold">
-            <h2>Gold Supporter ($1000 &ndash; $2999)</h2>
+            <h2>Gold ($1000 &ndash; $2999)</h2>
             <ul>
               <li>Team Poster</li>
               <li>Sponsorship Plaque</li>
@@ -106,16 +119,27 @@
     <div class="page about" data-page="about">
       <div class="container">
         <div class="inner-container">
-          
+          <h1>Hi, we're an awesome club! <u>Team #7721</u> of FRC</h1>
+          <div class="info-container">
+            <p>
+              We are the Robotics Club at Unionville High School, based in Markham, ON.
+              <br />
+              <br />
+              Our goal is for future generations of our ever-advancing society, to do our very best, and at the same time, learn to be <i>better than the very best</i>.
+              This goal is to be an infinite cycle of improvement and innovation.
+            </p>
+            <span><strong>Location:</strong> 201 Town Centre Blvd, Markham, ON L3R 8G5</span>
+            <a href="mailto:urobotics.marketing@gmail.com"><span><strong>Email:</strong> <u>urobotcs.marketing@gmail.com</u></span></a>
+            <a href="https://twitter.com/UHSRobotics1"><span><strong>Twitter:</strong> <u>@UHSRobotics1</u></span></a>
+          </div>
         </div>
       </div>
     </div>
     <footer>
       <span>
-          &copy;2018 Unionville High School.
+        &copy;2018 Unionville High School.
       </span>
     </footer>
   </div>
-  <div class="mobile-view-container">hola</div>
 </body>
 </html>
