@@ -3,7 +3,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Comfortaa', sans-serif;
   background: #232224;
   color: #ffffff;
@@ -12,23 +12,37 @@ body {
 div.view-container {
   position: relative;
   height: 100%;
-  overflow: hidden;
 }
 
 div.view-container header {
-  position: fixed;
+  z-index: 10;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
+  height: 76px;
   margin: 32px;
+  padding: 16px;
+  border-radius: 40px;
+  background: #ffffff;
+  user-select: none;
+  pointer-events: none;
+}
+
+div.view-container header img {
+  display: inline-block;
+  height: 100%;
 }
 
 div.view-container header h1 {
-  font-size: 32pt;
+  display: inline-block;
+  vertical-align: top;
+  color: #4f4955;
+  font-size: 38px;
 }
 
 div.view-container footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -178,7 +192,7 @@ div.view-container div.page > div.container::before {
 
 div.view-container div.page > div.container > div.inner-container {
   overflow-x: hidden;
-  position: relative;
+  position: fixed;
   height: 96vh;
   width: 100%;
   padding-top: 4vh;
@@ -287,12 +301,35 @@ div.view-container div.page.about > div.container {
     transform: translate(-48vh, 0);
   }
 }
-/* 
-@media only screen and (max-width: 50em) {
-  .view-container {
+
+@media only screen and (max-width: 814px) {
+  body:not(.opened) {
+    height: 200vh;
+  }
+
+  footer {
+    position: fixed;
+    top: 145vh;
+    bottom: initial !important;
+  }
+
+  .view-container .page {
+    left: 50vw !important;
+  }
+
+  body:not(.opened) .view-container .page.gallery {
+    top: 40vh !important;
+  }
+
+  body:not(.opened) .view-container .page.sponsors {
+    top: 80vh !important;
+  }
+
+  body:not(.opened) .view-container .page.about {
+    top: 120vh !important;
+  }
+
+  ::-webkit-scrollbar {
     display: none;
   }
-  .mobile-view-container {
-    display: initial;
-  }
-} */
+}

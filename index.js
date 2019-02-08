@@ -16,7 +16,7 @@ const images = [
 
 $(function () {
   for (let i = 0; i < 150; i++) {
-    $('.view-container').append('<img src="assets/images/Star.svg" class="star" style="left:' + (Math.random() * 100) + 'vw;top: ' + (Math.random() * 100) + 'vh;">');
+    $('.view-container').append('<img src="assets/images/Star.svg" class="star" style="left:' + (Math.random() * 100) + '%;top: ' + (Math.random() * 100) + '%;">');
   }
 
   $(".page").each(function (ind, target) {
@@ -26,6 +26,7 @@ $(function () {
       if ($(ev.target).hasClass("close") || $target.hasClass("hide")) return;
       $target.addClass("selected");
       $(".page").addClass("hide");
+      $("body").addClass("opened");
     });
     $target.find(".container").append('<span class="close"></span>');
   });
@@ -39,6 +40,7 @@ $(function () {
       $selected.find(".container").removeAttr("style");
       $(".page").removeClass("hide");
     });
+    $("body").removeClass("opened")
   });
 
   var galleryContainer = $('.gallery .img-container');
