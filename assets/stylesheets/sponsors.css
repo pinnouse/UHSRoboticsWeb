@@ -15,8 +15,9 @@ div.sponsors div.inner-container > div {
 div.sponsors div.inner-container > div > h2 {
   color: #2f2f2f;
   background: #fefefe;
-  padding: 32px 0;
-  font-weight: normal;
+  padding: 48px 0;
+  font-size: 32pt;
+  font-weight: bold;
 }
 
 div.sponsors div.inner-container > div ul {
@@ -34,6 +35,10 @@ div.sponsors div.inner-container div.content * {
   vertical-align: top;
 }
 
+div.sponsors div.inner-container div.content > div.sponsor {
+  display: inline-block;
+}
+
 div.sponsors div.diamond > img {
   display: block;
   width: 75vw;
@@ -46,9 +51,21 @@ div.sponsors div.diamond > div.content {
   margin: 0 auto;
 }
 
-div.sponsors div.diamond > div.content > img {
+div.sponsors div.diamond > div.content > div.sponsor {
   width: 45%;
   padding: 2%;
+}
+
+div.sponsor > img {
+  display: block;
+  width: 100%;
+}
+
+div.sponsor > span.caption {
+  display: block;
+  text-align: center;
+  padding-top: 12px;
+  font-size: 18pt;
 }
 
 div.sponsors div.platinum > img {
@@ -63,7 +80,7 @@ div.sponsors div.platinum > div.content {
   margin: 0 auto;
 }
 
-div.sponsors div.platinum > div.content > img {
+div.sponsors div.platinum > div.content > div.sponsor {
   width: 45%;
   padding: 2%;
 }
@@ -83,7 +100,7 @@ div.sponsors div.gold > div.content {
 }
 
 
-div.sponsors div.gold > div.content > img {
+div.sponsors div.gold > div.content > div.sponsor {
   display: inline-block;
   position: relative;
   width: 45%;
@@ -109,7 +126,7 @@ div.sponsors div.supporter > div.content {
   padding: 5%;
 }
 
-div.sponsors div.supporter > div.content > img {
+div.sponsors div.supporter > div.content > div.sponsor {
   display: inline-block;
   position: relative;
   width: 30%;
