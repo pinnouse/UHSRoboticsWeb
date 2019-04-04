@@ -11,7 +11,16 @@ const images = [
   "20190207_154149.jpg",
   "20190207_154201.jpg",
   "20190207_154219.jpg",
-  "20190207_154234.jpg"
+  "20190207_154234.jpg",
+  "IMG_3522.JPG",
+  "Image 2019-03-18 at 8.09 AM (4).jpg",
+  "_MG_8404.JPG",
+  "IMG_3310.JPG",
+  "IMG_3314.JPG",
+  "IMG_2458.JPG",
+  "IMG_2789.JPG",
+  "IMG_3417.jpg",
+  "_MG_3367.JPG"
 ];
 
 $(function () {
@@ -45,6 +54,6 @@ $(function () {
 
   var galleryContainer = $('.gallery .img-container');
   images.forEach(function (value) {
-    galleryContainer.prepend('<img src="assets/pictures/' + value + '" />');
+    galleryContainer.prepend('<img src="assets/pictures/' + value + '" / data-src="' + value + '">');
   });
 });
