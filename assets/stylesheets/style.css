@@ -1,3 +1,8 @@
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -191,7 +196,7 @@ div.view-container div.page > div.container::before {
 
 div.view-container div.page > div.container > div.inner-container {
   overflow-x: hidden;
-  position: fixed;
+  position: relative;
   height: 96vh;
   width: 100%;
   padding-top: 4vh;
@@ -302,30 +307,36 @@ div.view-container div.page.about > div.container {
 }
 
 @media only screen and (max-width: 814px) {
-  body:not(.opened) {
-    height: 200vh;
+  html.opened {
+    height: 100%;
   }
 
-  footer {
-    position: fixed;
-    top: 145vh;
-    bottom: initial !important;
+  html:not(.opened) body {
+    height: 150vh;
+  }
+
+  div.view-container footer {
+    bottom: 10px;
   }
 
   .view-container .page {
     left: 50vw !important;
   }
 
-  body:not(.opened) .view-container .page.gallery {
+  html:not(.opened) .view-container .page.gallery {
     top: 40vh !important;
   }
 
-  body:not(.opened) .view-container .page.sponsors {
+  html:not(.opened) .view-container .page.sponsors {
     top: 80vh !important;
   }
 
-  body:not(.opened) .view-container .page.about {
+  html:not(.opened) .view-container .page.about {
     top: 120vh !important;
+  }
+
+  html.opened div.page:not(.selected) {
+    display: none;
   }
 
   div.view-container > header > img {

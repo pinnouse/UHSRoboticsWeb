@@ -9,6 +9,7 @@ div.about .info-container a {
 }
 
 div.about .info-container span {
+  word-break: break-all;
   font-size: 20px;
   margin: 32px;
   border-radius: 40px;
@@ -20,6 +21,16 @@ div.about .info-container span {
   transition: 340ms;
 }
 
+div.about .info-container span div.map {
+  margin-top: 20px;
+}
+
 div.about .info-container span:hover {
   background: rgba(44, 48, 51, 0.925);
+}
+
+@media only screen and (max-width: 814px) {
+  div.about .info-container {
+    width: 90% !important;
+  }
 }

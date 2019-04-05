@@ -35,7 +35,7 @@ $(function () {
       if ($(ev.target).hasClass("close") || $target.hasClass("hide")) return;
       $target.addClass("selected");
       $(".page").addClass("hide");
-      $("body").addClass("opened");
+      $("html").addClass("opened");
     });
     $target.find(".container").append('<span class="close"></span>');
   });
@@ -49,7 +49,7 @@ $(function () {
       $selected.find(".container").removeAttr("style");
       $(".page").removeClass("hide");
     });
-    $("body").removeClass("opened")
+    $("html").removeClass("opened")
   });
 
   var galleryContainer = $('.gallery .img-container');
