@@ -54,6 +54,6 @@ $(function () {
 
   var galleryContainer = $('.gallery .img-container');
   images.forEach(function (value) {
-    galleryContainer.prepend('<img src="assets/pictures/' + value + '" / data-src="' + value + '">');
+    galleryContainer.prepend('<img src="https://github.com/pinnouse/UHSRoboticsWeb/raw/master/assets/pictures/' + value + '" / data-src="' + value + '">');
   });
 });

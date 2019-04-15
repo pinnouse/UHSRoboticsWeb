@@ -33,6 +33,10 @@ div.view-container header {
   pointer-events: none;
 }
 
+html.opened header {
+  opacity: 0;
+}
+
 div.view-container header img {
   display: inline-block;
   height: 76px;
@@ -262,7 +266,7 @@ div.view-container div.page.gallery div.planet {
 }
 
 div.view-container div.page.gallery > div.container {
-  background: #69613f;
+  background: #69613fd4;
 }
 
 div.view-container div.page.sponsors {
@@ -275,7 +279,7 @@ div.view-container div.page.sponsors div.planet {
 }
 
 div.view-container div.page.sponsors > div.container {
-  background: #613811;
+  background: #613811d4;
 }
 
 div.view-container div.page.about {
@@ -292,7 +296,7 @@ div.view-container div.page.about div.planet {
 }
 
 div.view-container div.page.about > div.container {
-  background: #224183;
+  background: #224183d4;
 }
 .mobile-view-container {
   display: none;
