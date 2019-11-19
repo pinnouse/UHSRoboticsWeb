@@ -1,5 +1,5 @@
 # UHSRoboticsWeb
-To be new home of: [uhsrobotics.org](https://uhsrobotics.org)
+To be new home of: [uhsrobotics.org](http://uhsrobotics.org)
 
 ## Description
 Site for the **UHS Robotics** team incorporating the theme *Deep Space*
